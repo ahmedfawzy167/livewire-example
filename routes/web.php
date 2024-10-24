@@ -8,6 +8,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/counter', Counter::class);
 
-Route::resource('posts', PostController::class);
+Route::get('/posts', [PostController::class, 'index']);
